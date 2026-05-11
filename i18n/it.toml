@@ -1,0 +1,149 @@
+[nav_more]
+other = "Altro"
+
+[contact]
+other = "Contatti"
+
+[home_kicker]
+other = "Benvenuti"
+
+[home_hero_title]
+other = "Un posto bellissimo, reso semplice"
+
+[home_hero_subtitle]
+other = "Scopri servizi, prezzi e come contattarci - nella tua lingua."
+
+[home_primary_cta]
+other = "Scopri i servizi"
+
+[home_secondary_cta]
+other = "Contatti"
+
+[home_highlights_title]
+other = "In evidenza"
+
+[home_highlight_1_title]
+other = "Informazioni chiare"
+
+[home_highlight_1_body]
+other = "Pagine ordinate e navigazione veloce."
+
+[home_highlight_2_title]
+other = "Due lingue"
+
+[home_highlight_2_body]
+other = "Italiano e inglese - sempre allineati."
+
+[home_highlight_3_title]
+other = "Contattaci"
+
+[home_highlight_3_body]
+other = "Trova i recapiti e scrivici in pochi secondi."
+
+[home_sections_title]
+other = "Tutto quello che serve"
+
+[home_sections_subtitle]
+other = "Link rapidi alle pagine più importanti."
+
+[home_card_about_title]
+other = "Chi siamo"
+
+[home_card_about_body]
+other = "La nostra storia e i nostri valori."
+
+[home_card_services_title]
+other = "Servizi"
+
+[home_card_services_body]
+other = "Cosa offriamo e come funziona."
+
+[home_card_privacy_title]
+other = "Privacy"
+
+[home_card_privacy_body]
+other = "Come gestiamo i dati personali."
+
+[home_card_contact_title]
+other = "Contatti"
+
+[home_card_contact_body]
+other = "Scrivici per domande o prenotazioni."
+
+[home_card_cta]
+other = "Scopri di più"
+
+[home_final_title]
+other = "Pronti a partire?"
+
+[home_final_body]
+other = "Inviaci un messaggio: ti rispondiamo al più presto."
+
+[home_final_cta]
+other = "Scrivici"
+
+[a11y_open_menu]
+other = "Apri il menu"
+
+[footer_rights]
+other = "Tutti i diritti riservati."
+
+[cookie_title]
+other = "Cookie"
+
+[cookie_body]
+other = "Usiamo cookie essenziali per far funzionare il sito."
+
+[cookie_learn_more]
+other = "Scopri di più"
+
+[cookie_accept]
+other = "OK"
+
+[contact_map_title]
+other = "Dove siamo"
+
+[contact_map_iframe_title]
+other = "Mappa"
+
+[contact_map_missing]
+other = "Mappa non disponibile."
+
+[contact_info_title]
+other = "Recapiti"
+
+[contact_info_email]
+other = "Email"
+
+[contact_info_phone]
+other = "Telefono"
+
+[contact_info_address]
+other = "Indirizzo"
+
+[contact_form_title]
+other = "Scrivici"
+
+[contact_form_name]
+other = "Nome"
+
+[contact_form_email]
+other = "Email"
+
+[contact_form_message]
+other = "Messaggio"
+
+[contact_form_name_placeholder]
+other = "Il tuo nome"
+
+[contact_form_email_placeholder]
+other = "nome@esempio.com"
+
+[contact_form_message_placeholder]
+other = "Come possiamo aiutarti?"
+
+[contact_form_submit]
+other = "Invia"
+
+[contact_form_disclaimer]
+other = "Risponderemo il prima possibile."

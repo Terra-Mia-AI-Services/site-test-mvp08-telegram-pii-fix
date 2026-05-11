@@ -1,0 +1,22 @@
+{{- $ctx := .ctx -}}
+{{- $pageId := .page_id -}}
+{{- $lang := ($ctx.Site.Language.Lang | default "it") -}}
+{{- $slug := "" -}}
+{{- $map := $ctx.Site.Params.page_slugs_by_lang -}}
+{{- with index $map $pageId -}}
+  {{- $slug = (index . $lang | default "") -}}
+  {{- if eq $slug "" -}}
+    {{- range $k, $v := . -}}
+      {{- if and (eq $slug "") $v -}}
+        {{- $slug = $v -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if eq $pageId "homepage" -}}
+  {{- "/" | relLangURL -}}
+{{- else if ne $slug "" -}}
+  {{- printf "%s/" $slug | relLangURL -}}
+{{- else -}}
+  {{- "/" | relLangURL -}}
+{{- end -}}

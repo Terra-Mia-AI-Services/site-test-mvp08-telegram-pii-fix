@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://site-test-mvp08-telegram-pii-fix.pages.dev/sitemap.xml

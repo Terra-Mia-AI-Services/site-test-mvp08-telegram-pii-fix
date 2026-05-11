@@ -1,0 +1,29 @@
+{{- $raw := .Site.Params.whatsapp_number | default .Site.Params.whatsapp -}}
+{{- $number := "" -}}
+{{- with $raw -}}
+  {{- $number = (printf "%v" .) -}}
+{{- end -}}
+{{- $number = replaceRE "[^0-9]" "" $number -}}
+{{- if ge (len $number) 6 -}}
+  {{- $text := .Site.Params.whatsapp_text | default "Chat on WhatsApp" -}}
+  {{- $message := .Site.Params.whatsapp_message | default "" -}}
+  {{- $href := printf "https://wa.me/%s" $number -}}
+  {{- if $message -}}
+    {{- $href = printf "%s?text=%s" $href ($message | urlquery) -}}
+  {{- end -}}
+
+  <a
+    href="{{ $href }}"
+    class="fixed z-50 bottom-5 right-5 inline-flex items-center gap-3 rounded-full bg-emerald-600 px-4 py-3 text-white shadow-lg transition hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="{{ $text }}"
+  >
+    <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/15">
+      <svg viewBox="0 0 32 32" class="h-5 w-5 fill-current" aria-hidden="true" focusable="false">
+        <path d="M19.11 17.92c-.28-.14-1.64-.81-1.9-.9-.25-.09-.44-.14-.62.14-.18.28-.71.9-.87 1.09-.16.18-.32.21-.6.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.12-.12.28-.32.41-.48.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.48-.07-.14-.62-1.5-.85-2.05-.22-.54-.45-.47-.62-.47h-.53c-.18 0-.48.07-.73.35-.25.28-.96.94-.96 2.3 0 1.36.99 2.67 1.13 2.85.14.18 1.95 2.98 4.73 4.18.66.28 1.17.45 1.57.57.66.21 1.26.18 1.74.11.53-.08 1.64-.67 1.87-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.18-.53-.32zM16.03 4C9.4 4 4 9.4 4 16.03c0 2.09.55 4.14 1.6 5.95L4 28l6.2-1.57c1.75.95 3.72 1.46 5.83 1.46 6.63 0 12.03-5.4 12.03-12.03C28.06 9.4 22.66 4 16.03 4zm0 21.72c-1.96 0-3.87-.53-5.52-1.52l-.4-.24-3.68.93.98-3.58-.26-.43a9.67 9.67 0 0 1-1.48-5.16c0-5.35 4.35-9.7 9.7-9.7s9.7 4.35 9.7 9.7-4.35 9.7-9.7 9.7z"/>
+      </svg>
+    </span>
+    <span class="hidden sm:inline text-sm font-medium">{{ $text }}</span>
+  </a>
+{{- end -}}

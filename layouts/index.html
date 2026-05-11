@@ -1,0 +1,14 @@
+{{ define "main" }}
+{{- $layout := .Site.Params.layout | default "hero_grande" -}}
+{{- if eq $layout "hero_grande" -}}
+  {{ partial "home/hero_grande.html" . }}
+{{- else if eq $layout "hero_compatto" -}}
+  {{ partial "home/hero_compatto.html" . }}
+{{- else if eq $layout "hero_split" -}}
+  {{ partial "home/hero_split.html" . }}
+{{- else if eq $layout "hero_minimale" -}}
+  {{ partial "home/hero_minimale.html" . }}
+{{- else -}}
+  {{ partial "home/hero_grande.html" . }}
+{{- end -}}
+{{ end }}
